@@ -15,8 +15,6 @@ namespace Garaio.CompositeC1Packages.GoogleAnalytics
 	{
 		private readonly DataConnection _dataConnection;
 
-		private readonly bool _isOwnDataConnection;
-
 		/// <summary>
 		/// Instanziert einen <see cref="GoogleAnalyticsManager" />.
 		/// <remarks>Die DataConnetion wird mittels eines unpublished publication scopes instanziert.</remarks>
@@ -24,7 +22,6 @@ namespace Garaio.CompositeC1Packages.GoogleAnalytics
 		public GoogleAnalyticsManager()
 		{
 			_dataConnection = new DataConnection(PublicationScope.Unpublished);
-			_isOwnDataConnection = true;
 		}
 
 		public void Dispose()
@@ -79,7 +76,7 @@ namespace Garaio.CompositeC1Packages.GoogleAnalytics
 		{
 			if (disposing)
 			{
-				if (_isOwnDataConnection && _dataConnection != null)
+				if (_dataConnection != null)
 				{
 					_dataConnection.Dispose();
 				}
