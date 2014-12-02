@@ -80,12 +80,14 @@
     <Content Include="Package\install.xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LICENSE" />
     <None Include="Package\App_Data\Razor\Garaio\GoogleAnalytics\RenderJavaScript.cshtml" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.css.map" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.css.map" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Package\App_GlobalResources\Garaio.CompositeC1Packages.GoogleAnalytics.Texte.resx">
