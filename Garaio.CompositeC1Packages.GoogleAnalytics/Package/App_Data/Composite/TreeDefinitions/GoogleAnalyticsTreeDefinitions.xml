@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ElementStructure xmlns="http://www.composite.net/ns/management/trees/treemarkup/1.0" xmlns:f="http://www.composite.net/ns/function/1.0">
+	<ElementStructure.AutoAttachments>
+		<NamedParent Name="System" Position="Bottom" />
+	</ElementStructure.AutoAttachments>
+	<ElementRoot>
+		<Children>
+			<Element Label="Google Analytics Settings" Id="GoogleAnalyticsRoot" Icon="perspective-config">
+				<Actions>
+					<CustomUrlAction Label="Manage Settings" Url="~/Composite/InstalledPackages/GoogleAnalytics.aspx" Icon="perspective-config"></CustomUrlAction>
+				</Actions>
+			</Element>
+		</Children>
+	</ElementRoot>
+</ElementStructure>

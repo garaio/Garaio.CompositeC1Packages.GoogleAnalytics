@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A623284-A5DF-45A2-A2D4-019DA6719081}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Garaio.CompositeC1Packages.GoogleAnalytics</RootNamespace>
+    <AssemblyName>Garaio.CompositeC1Packages.GoogleAnalytics</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Composite">
+      <HintPath>..\References\Composite\4.2\Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft\System.Web.WebPages.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurationConstants.cs" />
+    <Compile Include="DataTypes\IGoogleAnalyticsConfig.cs" />
+    <Compile Include="GoogleAnalyticsManager.cs" />
+    <Compile Include="Package\App_GlobalResources\Garaio.CompositeC1Packages.GoogleAnalytics.Texte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Garaio.CompositeC1Packages.GoogleAnalytics.Texte.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.cs">
+      <DependentUpon>GoogleAnalytics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.designer.cs">
+      <DependentUpon>GoogleAnalytics.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartupHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Package\App_Data\Composite\TreeDefinitions\GoogleAnalyticsTreeDefinitions.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Package\Frontend\Garaio\Scripts\bootstrap.min.js" />
+    <Content Include="Package\Frontend\Garaio\Scripts\bootstrapValidator.min.js" />
+    <Content Include="Package\Frontend\Garaio\Scripts\jquery-1.11.0.min.js" />
+    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-requiredonly.css" />
+    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.css" />
+    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Package\install.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\App_Data\Razor\Garaio\GoogleAnalytics\RenderJavaScript.cshtml" />
+    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.css.map" />
+    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Package\App_GlobalResources\Garaio.CompositeC1Packages.GoogleAnalytics.Texte.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Garaio.CompositeC1Packages.GoogleAnalytics.Texte.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)Garaio.CompositeC1Packages.*.dll" "$(ProjectDir)Package\Bin\" /E /I /Y
+del "$(ProjectDir)\Package\package.zip"
+del "$(ProjectDir)\Package\$(TargetName).zip"
+"$(ProjectDir)..\References\7za.exe" a "$(ProjectDir)\Package\$(TargetName).zip" -tzip -r "$(ProjectDir)\Package\*"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
