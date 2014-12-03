@@ -10,3 +10,9 @@ I’d like to track the traffic on my Composite C1 webpage with the Google Analy
 After the package successfully has been installed, you can save your Google Account Id within your C1 console.
 If you decide to add the Google Analytics script block to a content page, you could easily do this by adding the render java script function to your content page.
 The previously configured Google Account Id will be automatically added to your page.
+
+### Where can I find further information?
+Our Composite C1 Add-ons are hosted @ Github: https://github.com/garaio
+We appreciate your comments and ideas for improvements.
+
+Thank you!
