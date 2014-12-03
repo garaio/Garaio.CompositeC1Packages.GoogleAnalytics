@@ -54,41 +54,41 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 
-					<h1 class="margin-base-vertical"><%= Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Sesstings_Title_H1%></h1>
+					<h1 class="margin-base-vertical"><%= Resources_Text.Sesstings_Title_H1%></h1>
 
 					<div ID="SuccessAlert" class="alert alert-success alert-dismissible" role="alert" runat="server">
 						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&#215;</span><span class="sr-only">Close</span></button>
-						<strong><%# Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Success_Alert_Text_Strong%></strong> <%# Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Success_Alert_Text%>
+						<strong><%# Resources_Text.Success_Alert_Text_Strong%></strong> <%# Resources_Text.Success_Alert_Text%>
 					</div>
 
 					<form runat="server" ID="manageForm" role="form" class="form-horizontal">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h3 class="panel-title"><%= Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Panel_Title%></h3>
+								<h3 class="panel-title"><%= Resources_Text.Panel_Title%></h3>
 							</div>
 							<div class="panel-body">
 								<div class="form-group">
 									<label class="col-sm-4 control-label" for="TxtAccount">
-										<%= Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Label_For_TxtAccount%>
+										<%= Resources_Text.Label_For_TxtAccount%>
 									</label>
 									<div class="col-sm-8">
 										<asp:TextBox runat="server" ID="TxtAccount" autofocus="true" CssClass="form-control"
 											data-bv-notempty="true"
-											data-bv-notempty-message="<%# Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Validation_NotEmpty_Message%>"
+											data-bv-notempty-message="<%# Resources_Text.Validation_NotEmpty_Message%>"
 											data-bv-regexp="true"
 											data-bv-regexp-regexp="<%# ConfigurationConstants.AnalyticsIdRegexPattern%>"
-											data-bv-regexp-message="<%# Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Validation_RegEx_Message%>" />
+											data-bv-regexp-message="<%# Resources_Text.Validation_RegEx_Message%>" />
 										<asp:RegularExpressionValidator EnableClientScript="false" Display="Dynamic" runat="server"
 											ID="AccountIdValidator"
 											controltovalidate="TxtAccount"
 											validationexpression="<%# ConfigurationConstants.AnalyticsIdRegexPattern%>"
-											errormessage="<%# Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Validation_RegEx_Message%>"
+											errormessage="<%# Resources_Text.Validation_RegEx_Message%>"
 											ForeColor="#a94442" />
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-sm-3 col-sm-offset-9">
-										<asp:Button runat="server" ID="BtnSave" Text="<%# Garaio_CompositeC1Packages_GoogleAnalytics_Texte.Button_Save_Text%>" CssClass="btn btn-primary btn-block" OnCommand="SaveData" />
+										<asp:Button runat="server" ID="BtnSave" Text="<%# Resources_Text.Button_Save_Text%>" CssClass="btn btn-primary btn-block" OnCommand="SaveData" />
 									</div>
 								</div>
 							</div>

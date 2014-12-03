@@ -46,10 +46,10 @@
     <Compile Include="ConfigurationConstants.cs" />
     <Compile Include="DataTypes\IGoogleAnalyticsConfig.cs" />
     <Compile Include="GoogleAnalyticsManager.cs" />
-    <Compile Include="Package\App_GlobalResources\Garaio.CompositeC1Packages.GoogleAnalytics.Texte.Designer.cs">
+    <Compile Include="Package\App_GlobalResources\Resources.Text.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Garaio.CompositeC1Packages.GoogleAnalytics.Texte.resx</DependentUpon>
+      <DependentUpon>Resources.Text.resx</DependentUpon>
     </Compile>
     <Compile Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.cs">
       <DependentUpon>GoogleAnalytics.aspx</DependentUpon>
@@ -88,9 +88,9 @@
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Package\App_GlobalResources\Garaio.CompositeC1Packages.GoogleAnalytics.Texte.resx">
+    <EmbeddedResource Include="Package\App_GlobalResources\Resources.Text.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Garaio.CompositeC1Packages.GoogleAnalytics.Texte.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Text.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
