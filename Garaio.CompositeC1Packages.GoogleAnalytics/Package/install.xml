@@ -12,7 +12,7 @@
 		flushOnCompletion="true"
 		reloadConsoleOnCompletion="true">
 		<Description>Provides the ability to configure Google Analytics for the usage within your webpage.</Description>
-		<TechnicalDetails></TechnicalDetails>
+		<TechnicalDetails>Local management of Google Account-ID. Ability to integrate Google Analytics JavaScrip by adding a provided Composite-Function to your content.</TechnicalDetails>
 	</mi:PackageInformation>
 	
 	<mi:PackageFragmentInstallers>
