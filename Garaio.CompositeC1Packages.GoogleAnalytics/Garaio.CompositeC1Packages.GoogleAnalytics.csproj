@@ -80,7 +80,7 @@
     <Content Include="Package\install.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Package\App_Data\Razor\Garaio\GoogleAnalytics\RenderJavaScript.cshtml" />
+    <None Include="Package\App_Data\Razor\Garaio\GoogleAnalytics\RenderScriptBlock.cshtml" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.css.map" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.css.map" />
     <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
