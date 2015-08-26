@@ -120,8 +120,11 @@
   <data name="Button_Save_Text" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="Function_Description" xml:space="preserve">
+  <data name="Function_Description_Standard" xml:space="preserve">
     <value>Adds the Javascript-Code for Google Analytics.</value>
+  </data>
+  <data name="Function_Description_Universal" xml:space="preserve">
+    <value>Adds the Javascript-Code for Google Analytics with universal id.</value>
   </data>
   <data name="Label_For_TxtAccount" xml:space="preserve">
     <value>Google Analytics Account-ID</value>
