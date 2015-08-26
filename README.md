@@ -16,3 +16,12 @@ Our Composite C1 Add-ons are hosted @ Github: https://github.com/garaio
 We appreciate your comments and ideas for improvements.
 
 Thank you!
+
+---
+
+### Release notes
+
+#### 1.0.0 Base version
+
+#### 1.1.0 Universal Analytics
+Support for Google universal analytics
