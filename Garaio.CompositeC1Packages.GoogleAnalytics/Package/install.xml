@@ -4,7 +4,7 @@
 	
 	<mi:PackageInformation name="Garaio.CompositeC1Packages.GoogleAnalytics" 
 		groupName="Garaio" 
-		version="1.0.0" author="GARAIO AG" website="http://www.garaio.com" 
+		version="1.1.0" author="GARAIO AG" website="http://www.garaio.com" 
 		readMoreUrl="https://github.com/garaio/Garaio.CompositeC1Packages.GoogleAnalytics"
 		id="{F39143A8-48AB-4565-AEB1-B58BA1A38C47}" 
 		canBeUninstalled="true" 
