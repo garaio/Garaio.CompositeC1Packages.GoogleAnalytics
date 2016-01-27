@@ -51,13 +51,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.Text.resx</DependentUpon>
     </Compile>
-    <Compile Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.cs">
-      <DependentUpon>GoogleAnalytics.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.designer.cs">
-      <DependentUpon>GoogleAnalytics.aspx.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartupHandler.cs" />
   </ItemGroup>
@@ -65,30 +58,11 @@
     <Content Include="Package\App_Data\Composite\TreeDefinitions\GoogleAnalyticsTreeDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Package\Frontend\Garaio\Scripts\bootstrap.min.js" />
-    <Content Include="Package\Frontend\Garaio\Scripts\bootstrapValidator.min.js" />
-    <Content Include="Package\Frontend\Garaio\Scripts\jquery-1.11.0.min.js" />
-    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-requiredonly.css" />
-    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.css" />
-    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.css" />
-    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.min.css" />
-    <Content Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Package\Garaio\ConsoleExtensions\GoogleAnalytics.aspx">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
     <Content Include="Package\install.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Package\App_Data\Razor\Garaio\GoogleAnalytics\RenderUniversalScriptBlock.cshtml" />
     <None Include="Package\App_Data\Razor\Garaio\GoogleAnalytics\RenderScriptBlock.cshtml" />
-    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap-theme.css.map" />
-    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\css\bootstrap.css.map" />
-    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="Package\Frontend\Garaio\Styles\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Package\App_GlobalResources\Resources.Text.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Text.Designer.cs</LastGenOutput>

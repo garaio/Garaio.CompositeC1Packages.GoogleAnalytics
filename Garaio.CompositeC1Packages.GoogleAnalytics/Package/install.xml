@@ -15,24 +15,21 @@
 		<TechnicalDetails>Local management of Google Account-ID. Ability to integrate Google Analytics JavaScrip by adding a provided Composite-Function to your content.</TechnicalDetails>
 	</mi:PackageInformation>
 	
+
 	<mi:PackageFragmentInstallers>
 		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
 			<Files>
 				<File sourceFilename="~\App_Data\Composite\TreeDefinitions\GoogleAnalyticsTreeDefinitions.xml" targetFilename="~\App_Data\Composite\TreeDefinitions\GoogleAnalyticsTreeDefinitions.xml" allowOverwrite="true" />
-				<File sourceFilename="~\Garaio\ConsoleExtensions\GoogleAnalytics.aspx" targetFilename="~\Composite\InstalledPackages\GoogleAnalytics.aspx" allowOverwrite="true" />
-				<File sourceFilename="~\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.cs" targetFilename="~\Composite\InstalledPackages\GoogleAnalytics.aspx.cs" allowOverwrite="true" />
-				<File sourceFilename="~\Garaio\ConsoleExtensions\GoogleAnalytics.aspx.designer.cs" targetFilename="~\Composite\InstalledPackages\GoogleAnalytics.aspx.designer.cs" allowOverwrite="true" />
 				<File sourceFilename="~\Bin\Garaio.CompositeC1Packages.GoogleAnalytics.dll" targetFilename="~\Bin\Garaio.CompositeC1Packages.GoogleAnalytics.dll" allowOverwrite="true" />
 			</Files>
-			
+
 			<Directories>
 				<Directory sourceDirectory="~\App_Data\Razor\Garaio\GoogleAnalytics\" targetDirectory="~\App_Data\Razor\Garaio\GoogleAnalytics\" allowOverwrite="true" deleteTargetDirectory="false" />
-				<Directory sourceDirectory="~\Frontend\Garaio\" targetDirectory="~\Frontend\Garaio" allowOverwrite="true" deleteTargetDirectory="false" />
 			</Directories>
 		</mi:Add>
 
 		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.XmlFileMergePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.XmlFileMergePackageFragmentUninstaller, Composite">
-		<!--
+			<!--
 			<XmlFileMerges>
 				<XmlFileMerge changeDefinitionPath="~\config\App_Data\Composite\composite.config" targetFilePath="~\App_Data\Composite\composite.config" />
 			</XmlFileMerges>
