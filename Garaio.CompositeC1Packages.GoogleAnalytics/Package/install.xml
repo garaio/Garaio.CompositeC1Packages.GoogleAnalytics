@@ -1,20 +1,19 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
 	<mi:PackageRequirements minimumCompositeVersion="4.0" maximumCompositeVersion="9.9999.9999.9999" />
-	
-	<mi:PackageInformation name="Garaio.CompositeC1Packages.GoogleAnalytics" 
-		groupName="Garaio" 
-		version="1.1.0" author="GARAIO AG" website="http://www.garaio.com" 
+
+	<mi:PackageInformation name="Garaio.CompositeC1Packages.GoogleAnalytics"
+		groupName="Garaio"
+		version="1.2.0" author="GARAIO AG" website="http://www.garaio.com"
 		readMoreUrl="https://github.com/garaio/Garaio.CompositeC1Packages.GoogleAnalytics"
-		id="{F39143A8-48AB-4565-AEB1-B58BA1A38C47}" 
-		canBeUninstalled="true" 
-		systemLocking="hard" 
+		id="{F39143A8-48AB-4565-AEB1-B58BA1A38C47}"
+		canBeUninstalled="true"
+		systemLocking="hard"
 		flushOnCompletion="true"
 		reloadConsoleOnCompletion="true">
 		<Description>Provides the ability to configure Google Analytics for the usage within your webpage.</Description>
 		<TechnicalDetails>Local management of Google Account-ID. Ability to integrate Google Analytics JavaScrip by adding a provided Composite-Function to your content.</TechnicalDetails>
 	</mi:PackageInformation>
-	
 
 	<mi:PackageFragmentInstallers>
 		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
