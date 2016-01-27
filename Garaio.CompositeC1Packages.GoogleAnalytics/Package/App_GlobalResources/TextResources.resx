@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FunctionDescriptionStandard" xml:space="preserve">
+    <value>Adds the javascript-code for Google Analytics.</value>
+  </data>
+  <data name="FunctionDescriptionUniversal" xml:space="preserve">
+    <value>Adds the javascript-code for Google Analytics with universal id.</value>
+  </data>
   <data name="GoogleAnalyticsSettingsHelp" xml:space="preserve">
-    <value>Die C1 Seite wo man die Google Analytics Einstellungen vergeben kann.</value>
+    <value>C1 Site with the Google Analytics settings.</value>
   </data>
   <data name="GoogleAnalyticsSettingsPage" xml:space="preserve">
-    <value>Google Analytics Settings Page</value>
+    <value>Google Analytics settings-page</value>
   </data>
 </root>

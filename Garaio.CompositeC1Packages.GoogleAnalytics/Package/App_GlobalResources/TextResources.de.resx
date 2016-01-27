@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FunctionDescriptionStandard" xml:space="preserve">
+    <value>Fügt das Javascript-Code des Google Analytics hizu.</value>
+  </data>
+  <data name="FunctionDescriptionUniversal" xml:space="preserve">
+    <value>Fügt  das Javascript-Code des Google Analytics mit universal id hinzu.</value>
+  </data>
   <data name="GoogleAnalyticsSettingsHelp" xml:space="preserve">
     <value>Die C1 Seite wo man die Google Analytics Einstellungen vergeben kann.</value>
   </data>

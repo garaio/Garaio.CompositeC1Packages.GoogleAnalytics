@@ -3,7 +3,6 @@
 @using System.Linq
 @using Composite.Data
 @using Garaio.CompositeC1Packages.GoogleAnalytics.DataTypes
-@using Garaio.CompositeC1Packages.GoogleAnalytics.Package.App_GlobalResources
 
 @inherits Composite.AspNet.Razor.RazorFunction
 
@@ -11,14 +10,14 @@
 
 	public override string FunctionDescription
 	{
-		get { return Resources_Text.Function_Description_Universal; }
+		get { return Resources.TextResources.FunctionDescriptionUniversal; }
 	}
 
 	public string GetAccountId()
 	{
 		IEnumerable<Guid> treeIds = Sitemap.CurrentPageNode.GetPageIds(SitemapScope.AncestorsAndCurrent);
 
-		foreach (var pageIdId in treeIds)
+		foreach (Guid pageIdId in treeIds)
 		{
 			IGoogleAnalyticsConfig googleAnalyticsConfig = Data.Get<IGoogleAnalyticsConfig>().FirstOrDefault(c => c.PageId == pageIdId || c.PageId == null);
 			if (googleAnalyticsConfig != null)

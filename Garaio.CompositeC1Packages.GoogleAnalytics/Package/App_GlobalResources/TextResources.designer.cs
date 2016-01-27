@@ -61,7 +61,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Die C1 Seite wo man die Google Analytics Einstellungen vergeben kann..
+        ///   Looks up a localized string similar to Adds the javascript-code for Google Analytics..
+        /// </summary>
+        internal static string FunctionDescriptionStandard {
+            get {
+                return ResourceManager.GetString("FunctionDescriptionStandard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adds the javascript-code for Google Analytics with universal id..
+        /// </summary>
+        internal static string FunctionDescriptionUniversal {
+            get {
+                return ResourceManager.GetString("FunctionDescriptionUniversal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C1 Site with the Google Analytics settings..
         /// </summary>
         internal static string GoogleAnalyticsSettingsHelp {
             get {
@@ -70,7 +88,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Google Analytics Settings Page.
+        ///   Looks up a localized string similar to Google Analytics settings-page.
         /// </summary>
         internal static string GoogleAnalyticsSettingsPage {
             get {
