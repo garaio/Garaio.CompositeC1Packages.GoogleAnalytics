@@ -20,6 +20,8 @@
 			<Files>
 				<File sourceFilename="~\App_Data\Composite\TreeDefinitions\GoogleAnalyticsTreeDefinitions.xml" targetFilename="~\App_Data\Composite\TreeDefinitions\GoogleAnalyticsTreeDefinitions.xml" allowOverwrite="true" />
 				<File sourceFilename="~\Bin\Garaio.CompositeC1Packages.GoogleAnalytics.dll" targetFilename="~\Bin\Garaio.CompositeC1Packages.GoogleAnalytics.dll" allowOverwrite="true" />
+				<File sourceFilename="~\App_GlobalResources\TextResources.resx" targetFilename="~\App_GlobalResources\TextResources.resx" allowOverwrite="true" />
+				<File sourceFilename="~\App_GlobalResources\TextResources.de.resx" targetFilename="~\App_GlobalResources\TextResources.de.resx" allowOverwrite="true" />
 			</Files>
 
 			<Directories>

@@ -29,7 +29,7 @@ namespace Garaio.CompositeC1Packages.GoogleAnalytics.DataTypes
 		[StoreFieldType(PhysicalStoreFieldType.Guid, IsNullable = true)]
 		[ImmutableFieldId("943E0EBE-DAF5-4F3B-B858-BA4EEBC2F0F4")]
 		[ForeignKey(typeof(IPage), "Id", AllowCascadeDeletes = false, NullReferenceValue = null, NullReferenceValueType = typeof(Guid?))]
-		[FormRenderingProfile(Label = "Google Analytics Einstellungenseite", HelpText = "Die C1 Seite wo man die Google Analytics Einstellungen vergeben kann.")]
+		[FormRenderingProfile(Label = "${Resource, Resources.TextResources.GoogleAnalyticsSettingsPage}", HelpText = "${Resource, Resources.TextResources.GoogleAnalyticsSettingsHelp}")]
 		Guid? PageId { get; set; }
 	}
 }
