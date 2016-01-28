@@ -117,34 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Button_Save_Text" xml:space="preserve">
-    <value>Save</value>
+  <data name="FunctionDescriptionStandard" xml:space="preserve">
+    <value>Adds the javascript-code for Google Analytics.</value>
   </data>
-  <data name="Function_Description_Standard" xml:space="preserve">
-    <value>Adds the Javascript-Code for Google Analytics.</value>
+  <data name="FunctionDescriptionUniversal" xml:space="preserve">
+    <value>Adds the javascript-code for Google Analytics with universal id.</value>
   </data>
-  <data name="Function_Description_Universal" xml:space="preserve">
-    <value>Adds the Javascript-Code for Google Analytics with universal id.</value>
+  <data name="GoogleAnalyticsSettingsHelp" xml:space="preserve">
+    <value>C1 Site with the Google Analytics settings.</value>
   </data>
-  <data name="Label_For_TxtAccount" xml:space="preserve">
-    <value>Google Analytics Account-ID</value>
-  </data>
-  <data name="Panel_Title" xml:space="preserve">
-    <value>Basic Configuration</value>
-  </data>
-  <data name="Sesstings_Title_H1" xml:space="preserve">
-    <value>Google Analytics Settings</value>
-  </data>
-  <data name="Success_Alert_Text" xml:space="preserve">
-    <value>Account-ID has been successfully saved</value>
-  </data>
-  <data name="Success_Alert_Text_Strong" xml:space="preserve">
-    <value>Success!</value>
-  </data>
-  <data name="Validation_NotEmpty_Message" xml:space="preserve">
-    <value>The field account-id is required and cannot be empty</value>
-  </data>
-  <data name="Validation_RegEx_Message" xml:space="preserve">
-    <value>The field account-id should be formated like this:&lt;br /&gt;XX-yyyy...-zz... Two capital letters followed by two groups of digits</value>
+  <data name="GoogleAnalyticsSettingsPage" xml:space="preserve">
+    <value>Google Analytics settings-page</value>
   </data>
 </root>

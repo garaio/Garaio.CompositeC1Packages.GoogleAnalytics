@@ -6,8 +6,16 @@
 	<ElementRoot>
 		<Children>
 			<Element Label="Google Analytics Settings" Id="GoogleAnalyticsRoot" Icon="perspective-config">
+				<Children>
+					<DataElements Type="Garaio.CompositeC1Packages.GoogleAnalytics.DataTypes.IGoogleAnalyticsConfig, Garaio.CompositeC1Packages.GoogleAnalytics">
+						<Actions>
+							<EditDataAction Label="Manage Google Analytics Settings" />
+							<DeleteDataAction Label="Delete Google Analytics Settings" />
+						</Actions>
+					</DataElements>
+				</Children>
 				<Actions>
-					<CustomUrlAction Label="Manage Settings" Url="~/Composite/InstalledPackages/GoogleAnalytics.aspx" Icon="perspective-config"></CustomUrlAction>
+					<AddDataAction Label="Add Google Analytics Settings" Type="Garaio.CompositeC1Packages.GoogleAnalytics.DataTypes.IGoogleAnalyticsConfig"/>
 				</Actions>
 			</Element>
 		</Children>

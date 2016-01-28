@@ -1,6 +1,9 @@
+@using System
+@using System.Collections.Generic
 @using System.Linq
+@using Composite.Data
 @using Garaio.CompositeC1Packages.GoogleAnalytics.DataTypes
-@using Garaio.CompositeC1Packages.GoogleAnalytics.Package.App_GlobalResources
+
 
 @inherits Composite.AspNet.Razor.RazorFunction
 
@@ -8,39 +11,47 @@
 
 	public override string FunctionDescription
 	{
-		get { return Resources_Text.Function_Description_Standard; }
+		get { return Resources.TextResources.FunctionDescriptionStandard; }
 	}
 
 	public string GetAccountId()
 	{
-		IGoogleAnalyticsConfig googleAnalyticsConfig = Data.Get<IGoogleAnalyticsConfig>().SingleOrDefault();
+		IEnumerable<Guid> treeIds = Sitemap.CurrentPageNode.GetPageIds(SitemapScope.AncestorsAndCurrent);
 
-		return googleAnalyticsConfig != null ? googleAnalyticsConfig.AccountId : string.Empty;
+		foreach (Guid pageIdId in treeIds)
+		{
+			IGoogleAnalyticsConfig googleAnalyticsConfig = Data.Get<IGoogleAnalyticsConfig>().FirstOrDefault(c => c.PageId == pageIdId || c.PageId == null);
+			if (googleAnalyticsConfig != null)
+			{
+				return googleAnalyticsConfig.AccountId;
+			}
+		}
+		return string.Empty;
 	}
 
 }
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
-	<head>
+<head>
 
-		@if (!string.IsNullOrEmpty(GetAccountId()))
-		{
-			<script type="text/javascript">
-				var _gaq = _gaq || [];
-				_gaq.push(['_setAccount', '@GetAccountId()']);
-				_gaq.push(['_trackPageview']);
-				(function() {
-					var ga = document.createElement('script');
-					ga.type = 'text/javascript';
-					ga.async = true;
-					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					var s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(ga, s);
-				})();
-			</script>
-		}
+	@if (!string.IsNullOrEmpty(GetAccountId()))
+	{
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '@GetAccountId()']);
+			_gaq.push(['_trackPageview']);
+			(function () {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	}
 
-	</head>
-	<body>
-	</body>
+</head>
+<body>
+</body>
 </html>

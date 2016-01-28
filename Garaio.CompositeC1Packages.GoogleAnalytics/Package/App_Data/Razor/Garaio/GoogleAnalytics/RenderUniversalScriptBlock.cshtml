@@ -1,6 +1,8 @@
+@using System
+@using System.Collections.Generic
 @using System.Linq
+@using Composite.Data
 @using Garaio.CompositeC1Packages.GoogleAnalytics.DataTypes
-@using Garaio.CompositeC1Packages.GoogleAnalytics.Package.App_GlobalResources
 
 @inherits Composite.AspNet.Razor.RazorFunction
 
@@ -8,42 +10,50 @@
 
 	public override string FunctionDescription
 	{
-		get { return Resources_Text.Function_Description_Universal; }
+		get { return Resources.TextResources.FunctionDescriptionUniversal; }
 	}
 
 	public string GetAccountId()
 	{
-		IGoogleAnalyticsConfig googleAnalyticsConfig = Data.Get<IGoogleAnalyticsConfig>().SingleOrDefault();
+		IEnumerable<Guid> treeIds = Sitemap.CurrentPageNode.GetPageIds(SitemapScope.AncestorsAndCurrent);
 
-		return googleAnalyticsConfig != null ? googleAnalyticsConfig.AccountId : string.Empty;
+		foreach (Guid pageIdId in treeIds)
+		{
+			IGoogleAnalyticsConfig googleAnalyticsConfig = Data.Get<IGoogleAnalyticsConfig>().FirstOrDefault(c => c.PageId == pageIdId || c.PageId == null);
+			if (googleAnalyticsConfig != null)
+			{
+				return googleAnalyticsConfig.AccountId;
+			}
+		}
+		return string.Empty;
 	}
 
 }
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
-	<head>
+<head>
 
-		@if (!string.IsNullOrEmpty(GetAccountId()))
-		{
-			<script type="text/javascript">
-				(function(i, s, o, g, r, a, m) {
-					i['GoogleAnalyticsObject'] = r;
-					i[r] = i[r] || function() {
-						(i[r].q = i[r].q || []).push(arguments);
-					}, i[r].l = 1 * new Date();
-					a = s.createElement(o),
-						m = s.getElementsByTagName(o)[0];
-					a.async = 1;
-					a.src = g;
-					m.parentNode.insertBefore(a, m);
-				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	@if (!string.IsNullOrEmpty(GetAccountId()))
+	{
+		<script type="text/javascript">
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments);
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m);
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-				ga('create', '@GetAccountId()', 'auto');
-				ga('send', 'pageview');
-			</script>
-		}
+			ga('create', '@GetAccountId()', 'auto');
+			ga('send', 'pageview');
+		</script>
+	}
 
-	</head>
-	<body>
-	</body>
+</head>
+<body>
+</body>
 </html>
