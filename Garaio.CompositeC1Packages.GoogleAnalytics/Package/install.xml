@@ -1,10 +1,10 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
-	<mi:PackageRequirements minimumCompositeVersion="4.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageRequirements minimumCompositeVersion="5.0" maximumCompositeVersion="9.9999.9999.9999" />
 
 	<mi:PackageInformation name="Garaio.CompositeC1Packages.GoogleAnalytics"
 		groupName="Garaio"
-		version="1.2.0" author="GARAIO AG" website="http://www.garaio.com"
+		version="1.3.0" author="GARAIO AG" website="http://www.garaio.com"
 		readMoreUrl="https://github.com/garaio/Garaio.CompositeC1Packages.GoogleAnalytics"
 		id="{F39143A8-48AB-4565-AEB1-B58BA1A38C47}"
 		canBeUninstalled="true"
