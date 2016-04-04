@@ -21,6 +21,12 @@ Thank you!
 
 ### Release notes
 
+#### 1.3.0 Universal Analytics
+* Support for Composite C1 5.0
+
+#### 1.2.0 Universal Analytics
+* Multitenant support for Google Universal Analytics
+
 #### 1.1.0 Universal Analytics
 * Support for Google Universal Analytics
 
